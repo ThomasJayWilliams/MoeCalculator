@@ -25,9 +25,15 @@
         "Category": "Scroll"
     },
     {
-        "Name": "Light Blue ...",
+        "Name": "Light Blue Fat with Gold Cord",
         "Element": "Thunder",
         "Value": 13,
+        "Category": "Scroll"
+    },
+    {
+        "Name": "Red for Flames",
+        "Element": "Flame",
+        "Value": 11,
         "Category": "Scroll"
     },
     
@@ -115,9 +121,9 @@
     },
 
     {
-        "Name": "Black Ninja Headband",
+        "Name": "Poodle Stuffed Animal",
         "Element": "Flame",
-        "Value": 15,
+        "Value": 32,
         "Category": "Amulet"
     },
     {

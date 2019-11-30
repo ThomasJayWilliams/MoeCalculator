@@ -8,11 +8,14 @@ namespace MoeCalculator
 {
     public sealed class ItemSet : IEnumerable<Item>, ICloneable
     {
-        private const byte ItemLimit = 11;
+        private readonly int ItemLimit = 11;
 
         private readonly IDictionary<Category, Item> _items = new Dictionary<Category, Item>();
 
-        public ItemSet() { }
+        public ItemSet()
+        {
+            ItemLimit = Enum.GetValues(typeof(Category)).Length;
+        }
 
         public void AddOrReplace(Item item)
         {
@@ -60,25 +63,6 @@ namespace MoeCalculator
         }
 
         #endregion
-
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-
-            sb.AppendLine();
-            sb.AppendLine("Items:");
-            sb.AppendJoin("\n", _items);
-            sb.AppendLine("\n");
-
-            sb.AppendLine($"Total value: {GetTotalValue()}");
-            sb.AppendLine();
-
-            sb.AppendLine($"Flame total: {GetElementTotalValue(Element.Flame)}");
-            sb.AppendLine($"Ice total: {GetElementTotalValue(Element.Ice)}");
-            sb.AppendLine($"Thunder total: {GetElementTotalValue(Element.Thunder)}");
-
-            return sb.ToString();
-        }
 
         public void PrintFormatted()
         {

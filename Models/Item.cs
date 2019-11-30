@@ -25,7 +25,7 @@ namespace MoeCalculator
         {
             ConsoleHelper.WriteColored($"\t{this.Element}", this.Element.GetColor());
             Console.Write($"\t{this.Value}");
-            Console.WriteLine($"\t{this.Name}, {this.Category}");            
+            Console.WriteLine($"\t{this.Category}\t{this.Name}");            
         }
     }
 }
