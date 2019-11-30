@@ -80,6 +80,31 @@ namespace MoeCalculator
             return sb.ToString();
         }
 
+        public void PrintFormatted()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Items:");
+
+            foreach (var item in _items.Values)
+            {
+                Console.Write($"{item.Name} - {item.Value}, ");
+                ConsoleHelper.WriteColored(item.Element, item.Element.GetColor());
+                Console.WriteLine($", {item.Category}");
+            }            
+
+            Console.WriteLine($"Total value: {GetTotalValue()}");
+            Console.WriteLine();
+
+            ConsoleHelper.WriteColored("Flame total", Element.Flame.GetColor());
+            Console.WriteLine($": {GetElementTotalValue(Element.Flame)}");
+
+            ConsoleHelper.WriteColored("Ice total", Element.Ice.GetColor());
+            Console.WriteLine($": {GetElementTotalValue(Element.Ice)}");
+
+            ConsoleHelper.WriteColored("Thunder total", Element.Thunder.GetColor());
+            Console.WriteLine($": {GetElementTotalValue(Element.Thunder)}");
+        }
+
         #region IEnumerable<Item> Implementation
 
         public IEnumerator<Item> GetEnumerator()

@@ -15,8 +15,7 @@ namespace MoeCalculator
                 var calcTask = calc.CalculateAsync(int.MaxValue);
 
                 calcTask.Wait();
-
-                Console.WriteLine(calcTask.Result);
+                calcTask.Result.PrintFormatted();
             }
 
             else
@@ -31,8 +30,7 @@ namespace MoeCalculator
                 var calcTask = calc.CalculateAsync(limiter);
 
                 calcTask.Wait();
-
-                Console.WriteLine(calcTask.Result);
+                calcTask.Result.PrintFormatted();
             }
         }
     }
