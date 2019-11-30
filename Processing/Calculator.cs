@@ -87,14 +87,19 @@ namespace MoeCalculator
                                                     {
                                                         temp.AddOrReplace(cat11Item);
 
-                                                        var resultAvg = result.GetAverageDifference();
-                                                        var resultTotal = result.GetTotalValue();
-                                                        var tempTotal = temp.GetTotalValue();
-                                                        var tempAvg = temp.GetAverageDifference();
+                                                        foreach (var cat12Item in itemsByCategories[11])
+                                                        {
+                                                            temp.AddOrReplace(cat12Item);
 
-                                                        if ((tempAvg <= options.SuggestedDifference || tempAvg <= resultAvg)
-                                                            && tempTotal >= resultTotal && tempTotal >= options.MinimalTotalValue)
-                                                            result = temp.Clone() as ItemSet;
+                                                            var resultAvg = result.GetBiggestDifference(options.IncludeNinjutsu);
+                                                            var resultTotal = result.GetTotalValue();
+                                                            var tempTotal = temp.GetTotalValue();
+                                                            var tempAvg = temp.GetBiggestDifference(options.IncludeNinjutsu);
+
+                                                            if ((tempAvg <= options.SuggestedDifference || tempAvg <= resultAvg)
+                                                                && tempTotal >= resultTotal && tempTotal >= options.MinimalTotalValue)
+                                                                result = temp.Clone() as ItemSet;
+                                                        }
                                                     }
                                                 }
                                             }

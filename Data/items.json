@@ -93,6 +93,12 @@
         "Value": 35,
         "Category": "Skill"
     },
+    {
+        "Name": "Ninjutsu Skill",
+        "Element": "Ninju",
+        "Value": 35,
+        "Category": "Skill"
+    },
     
     {
         "Name": "Black Prayer Beads",
@@ -164,5 +170,18 @@
         "Element": "Thunder",
         "Value": 10,
         "Category": "Food"
+    },
+    
+    {
+        "Name": "Ricka's Birthday Background",
+        "Element": "Ninju",
+        "Value": 10,
+        "Category": "Backgr"
+    },
+    {
+        "Name": "Default Background",
+        "Element": "Ninju",
+        "Value": 5,
+        "Category": "Backgr"
     }
 ]

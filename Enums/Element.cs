@@ -4,6 +4,7 @@ namespace MoeCalculator
 {
     public enum Element
     {
+        [OutputColor(Color = ConsoleColor.Gray)]
         Unknown = 0,
 
         [OutputColor(Color = ConsoleColor.Red)]
@@ -13,6 +14,9 @@ namespace MoeCalculator
         Ice,
         
         [OutputColor(Color = ConsoleColor.Yellow)]
-        Thunder
+        Thunder,
+
+        [OutputColor(Color = ConsoleColor.Magenta)]
+        Ninju
     }
 }

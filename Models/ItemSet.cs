@@ -8,7 +8,7 @@ namespace MoeCalculator
 {
     public sealed class ItemSet : IEnumerable<Item>, ICloneable
     {
-        private readonly int ItemLimit = 11;
+        private readonly int ItemLimit = 12;
 
         private readonly IDictionary<Category, Item> _items = new Dictionary<Category, Item>();
 
@@ -35,11 +35,12 @@ namespace MoeCalculator
             return _items.Sum(i => i.Value.Value);
         }
 
-        public decimal GetAverageDifference()
+        public decimal GetBiggestDifference(bool includeNinnjutsu = false)
         {
             var total1 = GetElementTotalValue(Element.Flame);
             var total2 = GetElementTotalValue(Element.Ice);
             var total3 = GetElementTotalValue(Element.Thunder);
+            var total4 = GetElementTotalValue(Element.Ninju);
 
             var diffs = new List<decimal>
             {
@@ -51,8 +52,21 @@ namespace MoeCalculator
                 Math.Abs(total2 - total3)
             };
 
-            return diffs.Average();
-        }        
+            if (includeNinnjutsu)
+            {
+                diffs.AddRange(new decimal[]
+                {
+                    Math.Abs(total4 - total1),
+                    Math.Abs(total4 - total2),
+                    Math.Abs(total4 - total3),
+                    Math.Abs(total2 - total4),
+                    Math.Abs(total3 - total4),
+                    Math.Abs(total1 - total4)
+                });
+            }
+
+            return diffs.Max();
+        }
 
         public int GetElementTotalValue(Element elem)
         {
@@ -97,6 +111,9 @@ namespace MoeCalculator
 
             ConsoleHelper.WriteColored("\tThunder total", Element.Thunder.GetColor());
             Console.WriteLine($": {GetElementTotalValue(Element.Thunder)}");
+
+            ConsoleHelper.WriteColored("\tNinjutsu total", Element.Ninju.GetColor());
+            Console.WriteLine($": {GetElementTotalValue(Element.Ninju)}");
         }
 
         #region IEnumerable<Item> Implementation

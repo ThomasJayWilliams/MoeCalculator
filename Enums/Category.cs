@@ -12,6 +12,7 @@ namespace MoeCalculator
         Amulet,
         Bomb,
         Extra,
-        Food
+        Food,
+        Backgr
     }
 }
