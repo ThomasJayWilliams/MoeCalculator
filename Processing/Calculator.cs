@@ -15,7 +15,7 @@ namespace MoeCalculator
             _dataReader = new DataReader();
         }
 
-        public async Task<ItemSet> CalculateAsync(int differenceLimiter)
+        public async Task<ItemSet> CalculateAsync(Options options)
         {
             var items = await _dataReader.GetItemsAsync(
                 Path.Combine(Directory.GetCurrentDirectory(), "Data/items.json"));
@@ -27,11 +27,14 @@ namespace MoeCalculator
                 Environment.Exit(0);
             }
 
-            return GenerateAndCalculate(items, differenceLimiter);
+            return GenerateAndCalculate(items, options);
         }
 
-        private ItemSet GenerateAndCalculate(List<Item> items, int limiter)
+        private ItemSet GenerateAndCalculate(List<Item> items, Options options)
         {
+            if (options.SuggestedDifference <= 0)
+                options.SuggestedDifference = int.MaxValue;
+
             var result = new ItemSet();
             var itemsByCategories = Enum.GetValues(typeof(Category))
                 .Cast<Category>()
@@ -89,7 +92,8 @@ namespace MoeCalculator
                                                         var tempTotal = temp.GetTotalValue();
                                                         var tempAvg = temp.GetAverageDifference();
 
-                                                        if ((tempAvg <= limiter || tempAvg <= resultAvg) && tempTotal >= resultTotal)
+                                                        if ((tempAvg <= options.SuggestedDifference || tempAvg <= resultAvg)
+                                                            && tempTotal >= resultTotal && tempTotal >= options.MinimalTotalValue)
                                                             result = temp.Clone() as ItemSet;
                                                     }
                                                 }

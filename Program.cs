@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using CommandLine;
 
 namespace MoeCalculator
 {
@@ -7,31 +7,17 @@ namespace MoeCalculator
     {
         public static void Main(string[] args)
         {
-            var arg = args.FirstOrDefault();
+            Parser.Default.ParseArguments<Options>(args)
+                .WithParsed(Run);
+        }
+
+        public static void Run(Options opts)
+        {
             var calc = new Calculator();
+            var calcTask = calc.CalculateAsync(opts);
 
-            if (string.IsNullOrEmpty(arg))
-            {
-                var calcTask = calc.CalculateAsync(int.MaxValue);
-
-                calcTask.Wait();
-                calcTask.Result.PrintFormatted();
-            }
-
-            else
-            {
-                if (!int.TryParse(arg, out var limiter))
-                {
-                    Console.WriteLine("Only numbers allowed as arguments.");
-                    Console.ReadKey();
-                    Environment.Exit(0);
-                }
-
-                var calcTask = calc.CalculateAsync(limiter);
-
-                calcTask.Wait();
-                calcTask.Result.PrintFormatted();
-            }
+            calcTask.Wait();
+            calcTask.Result.PrintFormatted();
         }
     }
 }

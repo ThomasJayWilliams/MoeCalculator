@@ -54,7 +54,7 @@ namespace MoeCalculator
             return diffs.Average();
         }        
 
-        private int GetElementTotalValue(Element elem)
+        public int GetElementTotalValue(Element elem)
         {
             if (_items.IsNull() || _items.IsFilledWithNulls())
                 return 0;
@@ -62,10 +62,25 @@ namespace MoeCalculator
             return _items.Where(i => i.Value.Element == elem).Sum(i => i.Value.Value);
         }
 
+        public List<int> GetElementTotalValues()
+        {
+            var elements = Enum.GetValues(typeof(Element)).Cast<Element>();
+
+            return elements.Select(e => GetElementTotalValue(e))
+                .ToList();
+        }
+
         #endregion
 
         public void PrintFormatted()
         {
+            if (!_items.Values.Any())
+            {
+                Console.WriteLine("No item set generated.");
+
+                return;
+            }
+
             Console.WriteLine();
             Console.WriteLine("Items:");
 
