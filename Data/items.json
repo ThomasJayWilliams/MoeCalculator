@@ -1,0 +1,162 @@
+[
+    {
+        "Name": "Akari",
+        "Element": "Flame",
+        "Value": 122,
+        "Category": "Image"
+    },
+    {
+        "Name": "Ricka",
+        "Element": "Ice",
+        "Value": 131,
+        "Category": "Image"
+    },
+    {
+        "Name": "Enju",
+        "Element": "Thunder",
+        "Value": 53,
+        "Category": "Image"
+    },
+    
+    {
+        "Name": "Red for Ninjas",
+        "Element": "Flame",
+        "Value": 15,
+        "Category": "Scroll"
+    },
+    {
+        "Name": "Light Blue ...",
+        "Element": "Thunder",
+        "Value": 13,
+        "Category": "Scroll"
+    },
+    
+    {
+        "Name": "Yellow Crystal Sword",
+        "Element": "Ice",
+        "Value": 32,
+        "Category": "Arm"
+    },
+    {
+        "Name": "Brown Plain Wooden Sword",
+        "Element": "Flame",
+        "Value": 14,
+        "Category": "Arm"
+    },
+    {
+        "Name": "Tengge's Full-Moon Fan",
+        "Element": "Thunder",
+        "Value": 20,
+        "Category": "Arm"
+    },
+    
+    {
+        "Name": "Gold Kunai",
+        "Element": "Ice",
+        "Value": 13,
+        "Category": "Throw"
+    },
+    {
+        "Name": "Blue Shell-Themed Bag",
+        "Element": "Flame",
+        "Value": 35,
+        "Category": "Throw"
+    },
+    {
+        "Name": "Snow Maiden Fan",
+        "Element": "Thunder",
+        "Value": 55,
+        "Category": "Throw"
+    },
+    
+    {
+        "Name": "Ricka's Ice Jutsu",
+        "Element": "Ice",
+        "Value": 24,
+        "Category": "Skill"
+    },
+    {
+        "Name": "Akari's Enhanced Shadow Clone Jutsu",
+        "Element": "Flame",
+        "Value": 35,
+        "Category": "Skill"
+    },
+    {
+        "Name": "Enju's Enhanced Lightning Jutsu",
+        "Element": "Thunder",
+        "Value": 35,
+        "Category": "Skill"
+    },
+    
+    {
+        "Name": "Black Prayer Beads",
+        "Element": "Ice",
+        "Value": 16,
+        "Category": "Gem"
+    },
+    {
+        "Name": "Clue Crystal Charm",
+        "Element": "Flame",
+        "Value": 40,
+        "Category": "Gem"
+    },
+    
+    {
+        "Name": "Horsie Wooden Plaque",
+        "Element": "Flame",
+        "Value": 25,
+        "Category": "Charm"
+    },
+    {
+        "Name": "Pink Crystal Talisman",
+        "Element": "Ice",
+        "Value": 42,
+        "Category": "Charm"
+    },
+
+    {
+        "Name": "Black Ninja Headband",
+        "Element": "Flame",
+        "Value": 15,
+        "Category": "Amulet"
+    },
+    {
+        "Name": "Plain Wood for Decoy",
+        "Element": "Ice",
+        "Value": 10,
+        "Category": "Amulet"
+    },
+    
+    {
+        "Name": "White Papier-mache Grenade",
+        "Element": "Thunder",
+        "Value": 11,
+        "Category": "Bomb"
+    },
+    {
+        "Name": "Purple Giant",
+        "Element": "Ice",
+        "Value": 27,
+        "Category": "Bomb"
+    },
+    
+    {
+        "Name": "Empty Item",
+        "Element": "Thunder",
+        "Value": 0,
+        "Category": "Extra"
+    },
+    
+    {
+        "Name": "Ricka's Birthday Cake",
+        "Element": "Ice",
+        "Value": 32,
+        "Category": "Food"
+    },
+    {
+        "Name": "Black Nonperishables",
+        "Element": "Thunder",
+        "Value": 10,
+        "Category": "Food"
+    }
+]
