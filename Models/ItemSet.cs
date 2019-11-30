@@ -86,22 +86,17 @@ namespace MoeCalculator
             Console.WriteLine("Items:");
 
             foreach (var item in _items.Values)
-            {
-                Console.Write($"{item.Name} - {item.Value}, ");
-                ConsoleHelper.WriteColored(item.Element, item.Element.GetColor());
-                Console.WriteLine($", {item.Category}");
-            }            
+                item.PrintFormatted();
 
-            Console.WriteLine($"Total value: {GetTotalValue()}");
-            Console.WriteLine();
+            Console.WriteLine($"\nTotal value: {GetTotalValue()}\n");
 
-            ConsoleHelper.WriteColored("Flame total", Element.Flame.GetColor());
+            ConsoleHelper.WriteColored("\tFlame total", Element.Flame.GetColor());
             Console.WriteLine($": {GetElementTotalValue(Element.Flame)}");
 
-            ConsoleHelper.WriteColored("Ice total", Element.Ice.GetColor());
+            ConsoleHelper.WriteColored("\tIce total", Element.Ice.GetColor());
             Console.WriteLine($": {GetElementTotalValue(Element.Ice)}");
 
-            ConsoleHelper.WriteColored("Thunder total", Element.Thunder.GetColor());
+            ConsoleHelper.WriteColored("\tThunder total", Element.Thunder.GetColor());
             Console.WriteLine($": {GetElementTotalValue(Element.Thunder)}");
         }
 
@@ -126,7 +121,7 @@ namespace MoeCalculator
             var result = new ItemSet();
 
             foreach (var item in _items.Values)
-                result.AddOrReplace(item);
+                result.AddOrReplace(item.Clone() as Item);
 
             return result;
         }

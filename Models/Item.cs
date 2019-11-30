@@ -1,6 +1,8 @@
+using System;
+
 namespace MoeCalculator
 {
-    public sealed class Item
+    public sealed class Item : ICloneable
     {
         public string Name { get; set; }
 
@@ -10,7 +12,20 @@ namespace MoeCalculator
 
         public Category Category { get; set; }
 
-        public override string ToString() =>
-            $"{Name} - {Value}, {Element}, {Category}";
+        public object Clone() =>
+            new Item
+            {
+                Category = this.Category,
+                Element = this.Element,
+                Name = this.Name.Clone().ToString(),
+                Value = this.Value
+            };
+
+        public void PrintFormatted()
+        {
+            ConsoleHelper.WriteColored($"\t{this.Element}", this.Element.GetColor());
+            Console.Write($"\t{this.Value}");
+            Console.WriteLine($"\t{this.Name}, {this.Category}");            
+        }
     }
 }
