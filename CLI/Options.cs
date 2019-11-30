@@ -10,7 +10,7 @@ namespace MoeCalculator
         [Option('m', "min-total", Required = false, HelpText = "Sets minimal summary total value of the result set.")]
         public int MinimalTotalValue { get; set; }
 
-        [Option("include-ninjutsu", Required = false, HelpText = "Specifies wheither should ninjutsu be included in calculation or not.")]
+        [Option("include-ninjutsu", Required = false, HelpText = "Specifies whether should ninjutsu be included in calculation or not.")]
         public bool IncludeNinjutsu { get; set; }
     }
 }
