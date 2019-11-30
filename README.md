@@ -1,6 +1,6 @@
 ## MoeCalculator
 
-Little CLI app, that helps to build the most effective item set in "Moe! Ninja Girls: game.
+Small CLI app, that helps to build the most effective item set in "Moe! Ninja Girls" game.
 Set your items in Data\items.json and run program.
 
 ### Arguments & help screen
@@ -12,7 +12,7 @@ Copyright (C) 2019 MoeCalculator
 
   -m, --min-total       Sets minimal summary total value of the result set.
 
-  --include-ninjutsu    Specifies wheither should ninjutsu be included in calculation or not.
+  --include-ninjutsu    Specifies whether should ninjutsu be included in calculation or not.
 
   --help                Display this help screen.
 
