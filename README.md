@@ -8,35 +8,39 @@ Set your items in Data\items.json and run program.
 MoeCalculator 1.0.0
 Copyright (C) 2019 MoeCalculator
 
-  -d, --difference    Sets preffered average difference between element totals.
+  -d, --difference      Sets preffered average difference between element totals.
 
-  -m, --min-total     Sets minimal summary total value of the result set.
+  -m, --min-total       Sets minimal summary total value of the result set.
 
-  --help              Display this help screen.
+  --include-ninjutsu    Specifies wheither should ninjutsu be included in calculation or not.
 
-  --version           Display version information.
+  --help                Display this help screen.
+
+  --version             Display version information.
 ```
 
 ### Run example
 ```shell
-D:\Moe\MoeCalculator\bin\Debug\netcoreapp3.0>moecalculator -d 10 -m 350
+D:\Moe\MoeCalculator\bin\Debug\netcoreapp3.0>MoeCalculator -d 100 --include-ninjutsu
 
 Items:
-        Flame   122     Image   Akari
-        Thunder 13      Scroll  Light Blue Fat with Gold Cord
+        Ice     131     Image   Ricka
+        Flame   15      Scroll  Red for Ninjas
         Thunder 20      Arm     Tengge's Full-Moon Fan
         Thunder 55      Throw   Snow Maiden Fan
-        Thunder 35      Skill   Enju's Enhanced Lightning Jutsu
-        Ice     16      Gem     Black Prayer Beads
-        Ice     42      Charm   Pink Crystal Talisman
-        Ice     10      Amulet  Plain Wood for Decoy
-        Ice     27      Bomb    Purple Giant
+        Ninju   35      Skill   Ninjutsu Skill
+        Flame   40      Gem     Clue Crystal Charm
+        Flame   25      Charm   Horsie Wooden Plaque
+        Flame   32      Amulet  Poodle Stuffed Animal
+        Thunder 11      Bomb    White Papier-mache Grenade
         Thunder 0       Extra   Empty Item
-        Ice     32      Food    Ricka's Birthday Cake
+        Thunder 10      Food    Black Nonperishables
+        Ninju   10      Backgr  Ricka's Birthday Background
 
-Total value: 372
+Total value: 384
 
-        Flame total: 122
-        Ice total: 127
-        Thunder total: 123
+        Flame total: 112
+        Ice total: 131
+        Thunder total: 96
+        Ninjutsu total: 45
 ```
