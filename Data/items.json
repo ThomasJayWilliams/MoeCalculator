@@ -14,14 +14,14 @@
     {
         "Name": "Enju",
         "Element": "Thunder",
-        "Value": 53,
+        "Value": 94,
         "Category": "Image"
     },
     
     {
-        "Name": "Red for Ninjas",
+        "Name": "Winged Scroll",
         "Element": "Flame",
-        "Value": 15,
+        "Value": 28,
         "Category": "Scroll"
     },
     {
@@ -31,9 +31,9 @@
         "Category": "Scroll"
     },
     {
-        "Name": "Red for Flames",
-        "Element": "Flame",
-        "Value": 11,
+        "Name": "Brown First-aid Kit",
+        "Element": "Ice",
+        "Value": 21,
         "Category": "Scroll"
     },
     
@@ -50,9 +50,9 @@
         "Category": "Arm"
     },
     {
-        "Name": "Tengge's Full-Moon Fan",
+        "Name": "Winged Wand",
         "Element": "Thunder",
-        "Value": 20,
+        "Value": 27,
         "Category": "Arm"
     },
     
@@ -101,9 +101,9 @@
     },
     
     {
-        "Name": "Black Prayer Beads",
+        "Name": "Blue Fireball",
         "Element": "Ice",
-        "Value": 16,
+        "Value": 20,
         "Category": "Gem"
     },
     {
@@ -125,6 +125,12 @@
         "Value": 42,
         "Category": "Charm"
     },
+    {
+        "Name": "Brand New Playscript",
+        "Element": "Ninju",
+        "Value": 14,
+        "Category": "Charm"
+    },
 
     {
         "Name": "Poodle Stuffed Animal",
@@ -136,6 +142,12 @@
         "Name": "Plain Wood for Decoy",
         "Element": "Ice",
         "Value": 10,
+        "Category": "Amulet"
+    },
+    {
+        "Name": "Purple Bear Stuffed Animal",
+        "Element": "Thunder",
+        "Value": 32,
         "Category": "Amulet"
     },
     
@@ -151,18 +163,24 @@
         "Value": 27,
         "Category": "Bomb"
     },
+    {
+        "Name": "Black Spinning Fmalethrower",
+        "Element": "Flame",
+        "Value": 10,
+        "Category": "Bomb"
+    },
     
     {
-        "Name": "Empty Item",
-        "Element": "Thunder",
-        "Value": 0,
+        "Name": "Milk's Adventures 2 Cartridge",
+        "Element": "Ice",
+        "Value": 35,
         "Category": "Extra"
     },
     
     {
-        "Name": "Ricka's Birthday Cake",
+        "Name": "Pink Lightning Sweets",
         "Element": "Ice",
-        "Value": 32,
+        "Value": 35,
         "Category": "Food"
     },
     {
@@ -171,17 +189,17 @@
         "Value": 10,
         "Category": "Food"
     },
+    {
+        "Name": "Super Holy Water (Soda)",
+        "Element": "Ninju",
+        "Value": 15,
+        "Category": "Food"
+    },
     
     {
         "Name": "Ricka's Birthday Background",
         "Element": "Ninju",
         "Value": 10,
-        "Category": "Backgr"
-    },
-    {
-        "Name": "Default Background",
-        "Element": "Ninju",
-        "Value": 5,
         "Category": "Backgr"
     }
 ]
